@@ -51,6 +51,13 @@
     formControlName="city"
   >
 
+  <label for="zip_code">Code postal</label>
+  <input 
+    type="text" name="zip_code" id="zip_code"
+    required minlength="2"
+    formControlName="zip_code"
+  >
+
   <label for="country">Pays</label>
   <input 
     type="text" name="country" id="country"
@@ -65,8 +72,8 @@
     formControlName="birthdate"
   >
 
-  <label for="profil">Profil</label>
-  <select name="profil" id="profil" formControlName="profil">
+  <label for="type">Profil</label>
+  <select name="type" id="type" formControlName="type">
     <option *ngFor="let item of ['merchant', 'neighborhood', 'admin']" [value]="item">{{item}}</option>
   </select>
 

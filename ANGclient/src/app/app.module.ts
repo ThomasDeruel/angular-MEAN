@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { MainRouter } from "./app.router";
 import { HeaderComponent } from "./components/header/header.component";
-
 import { AppComponent } from './app.component';
+import { AuthService } from "./services/auth/auth.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot( MainRouter, { onSameUrlNavigation: 'reload' } ),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
