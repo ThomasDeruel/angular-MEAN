@@ -3,13 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-header></app-header>
+    <app-header [title]="appTitle"></app-header>
     <router-outlet></router-outlet>
   `
 })
 export class AppComponent implements OnInit {
   
-  constructor(){}
+  public appTitle: string;
+
+  constructor(){
+    this.appTitle = `Hello Stranger`
+  }
 
   ngOnInit(){}
 }
