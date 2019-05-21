@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <app-header [title]="appTitle"></app-header>
     <router-outlet></router-outlet>
+    <button (click)="title = 'New title'" >test</button>
   `
 })
 export class AppComponent implements OnInit {

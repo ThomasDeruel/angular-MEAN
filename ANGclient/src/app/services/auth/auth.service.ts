@@ -29,6 +29,16 @@ export class AuthService {
     .toPromise().then(this.getData).catch(this.handleError)
   }
 
+  // Method Authenticate POST
+  public authenticate = (): Promise<any> => {
+    const myHeader = {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${window.localStorage.getItem('user-token')}`)
+    }
+
+    return this.HttpClient.get('https://mcba.dwsapp.io/api/user/me', myHeader)
+    .toPromise().then(this.getData).catch(this.handleError)
+  }
+
   // Get the API response
   private getData(res: any){
     return res || {};
