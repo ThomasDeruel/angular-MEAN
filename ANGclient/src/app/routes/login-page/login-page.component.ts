@@ -15,7 +15,11 @@ export class LoginPageComponent implements OnInit {
 
   private loginUser = ( userData: UserModel ) => {
     this.AuthService.login( userData )
-    .then( apiResponse => console.log(apiResponse) )
+    .then( apiResponse => {
+      console.log(apiResponse)
+
+      window.localStorage.setItem( 'user-token', apiResponse.data.token )
+    } )
     .catch( apiResponse => console.error(apiResponse) )
   }
 

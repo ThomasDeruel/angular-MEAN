@@ -22,7 +22,6 @@ export class AuthService {
 
   // Method Login POST
   public login = ( userData: UserModel ): Promise<any> => {
-    console.log({userData})
     const myHeader = new HttpHeaders()
     myHeader.append('Content-Type', 'application/json')
 
