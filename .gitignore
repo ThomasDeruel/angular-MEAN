@@ -2,3 +2,4 @@
 ./node_modules
 ./ANGclient
 /ANGclient
+.env
