@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+    Colors
+*/
+
+.alimentation {
+    color:red;
+}
+
+.services {
+    color:blue;
+}
+
+
+.beau--sante-et-bien-etre {
+    color:green;
+}
+
+.restauration {
+    color:pink;
+}
+
+.maison-et-deco {
+    color: brown;
+}
+
+.loisirs-et-divertissements {
+    color:purple;
+}
+
+
+ul.categoryList li{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    border: 0.1rem solid gray;
+}
+
+ul.categoryList li.active {
+    color:white;
+    background: gray;
+}
+app-home-page > ul li:not(:last-of-type) {
+    margin-right: 1rem;
+}

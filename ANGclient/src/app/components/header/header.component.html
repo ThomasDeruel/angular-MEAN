@@ -5,6 +5,10 @@
       <li *ngFor="let item of activeNav">
         <a [routerLink]="item.path" [textContent]="item.value"></a>
     </li>
+    <button
+    *ngIf="userIsConnected"
+    (click)="logoutUser()">
+      Logout</button>
     </ul>
   </nav>
 </header>

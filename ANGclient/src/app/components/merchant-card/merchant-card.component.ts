@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { InvokeFunctionExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-merchant-card',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MerchantCardComponent implements OnInit {
 
+  @Input() merchant: any
   constructor() { }
 
   ngOnInit() {
