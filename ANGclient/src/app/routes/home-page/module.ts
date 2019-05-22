@@ -7,6 +7,7 @@ Imports
 
     // Inner
     import { HomePageComponent } from './home-page.component';
+    import { MerchantCardComponent } from "../../components/merchant-card/merchant-card.component";
     import { Routing } from "./router";
 //
 
@@ -15,7 +16,7 @@ Imports
 Definition 
 */
     @NgModule({
-        declarations: [ HomePageComponent ],
+        declarations: [ HomePageComponent, MerchantCardComponent ],
         imports: [ 
             CommonModule, 
 

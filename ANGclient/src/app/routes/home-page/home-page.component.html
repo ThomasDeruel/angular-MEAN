@@ -1,3 +1,6 @@
 <ul *ngIf="marchantCollection">
-  {{marchantCollection[0] | json}}
+  <li *ngFor="let item of marchantCollection">
+    {{item.content.name}}
+    <app-merchant-card></app-merchant-card>
+  </li>
 </ul>
