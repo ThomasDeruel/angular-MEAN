@@ -10,6 +10,7 @@ Importer les composants serveur
 
     // Inner
     const frontRouter = require('./routes/front.router');
+    const apiRouter = require('./routes/api.router');
 //
 
 /*
@@ -32,8 +33,9 @@ Configuration du serveur
     server.use(bodyParser.urlencoded({ extended: true }));
 
     // Utilisation des routers
+    server.use('/api', apiRouter);
     server.use('/', frontRouter);
-
+    
     /* 
     Lancer le serveur
     */
